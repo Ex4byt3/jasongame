@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhjtm2yvbbv5h"]
+
+[ext_resource type="Script" path="res://scripts/Generator.gd" id="1_5aj6h"]
+
+[node name="Generator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5aj6h")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 97.0
+offset_bottom = 60.0
+text = "Cost : 1"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 141.0
+offset_bottom = 23.0
+text = "%d %s"
+
+[node name="Timer" type="Timer" parent="."]
