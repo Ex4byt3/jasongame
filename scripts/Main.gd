@@ -10,7 +10,7 @@ func _ready() -> void:
 	_connect_signals()
 
 func _get_nodes() -> void :
-	pointsLabel = get_node("PointLabel")
+	pointsLabel = get_node("PointsLabel")
 	mainButton = get_node("MainButton")
 
 func _connect_signals() -> void :
