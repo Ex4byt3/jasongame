@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://g2836nv512hq"]
+[gd_scene load_steps=5 format=3 uid="uid://g2836nv512hq"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_ya0j0"]
+[ext_resource type="Script" path="res://scripts/Generators/GeneratorManager.gd" id="2_lhspl"]
 [ext_resource type="PackedScene" uid="uid://bhjtm2yvbbv5h" path="res://scenes/Generator.tscn" id="2_yhpdk"]
+[ext_resource type="Script" path="res://scripts/Generators/Gen1.gd" id="4_h3ha7"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -40,9 +42,15 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Click Me"
 
-[node name="Generator" parent="." instance=ExtResource("2_yhpdk")]
-layout_mode = 1
-offset_left = 45.0
-offset_top = 25.0
-offset_right = -983.0
-offset_bottom = -533.0
+[node name="GeneratorManager" type="Node" parent="."]
+script = ExtResource("2_lhspl")
+
+[node name="Gen2" parent="GeneratorManager" instance=ExtResource("2_yhpdk")]
+offset_left = 5.0
+offset_top = 89.0
+offset_right = 5.0
+offset_bottom = 89.0
+script = ExtResource("4_h3ha7")
+
+[node name="Gen1" parent="GeneratorManager" instance=ExtResource("2_yhpdk")]
+script = ExtResource("4_h3ha7")

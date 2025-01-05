@@ -24,4 +24,4 @@ func _process(delta: float) -> void:
 	_update_points()
 
 func _update_points() -> void :
-	pointsLabel.text = "Points : %s" %Global.points
+	pointsLabel.text = "Points : %.3f" %Global.points
